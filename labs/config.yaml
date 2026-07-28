@@ -1,0 +1,17 @@
+#EDA
+data:
+  raw_path: "data/raw/Paletização.csv"
+  processed_path: "data/processed/pedidos_limpios.parquet"
+
+columns:
+  date_col: "DATA_ENTREGA"
+  target_col: "STATUS_PALLET_LASTRO"
+  volume_col: "VOL_CF"
+  dimensions: 
+    - "RAZAO_SOCIAL"      # To see which clients order fractionally
+    - "SKU_ECC_DESC"      # To see which products don't fill a layer (lastro)
+    - "CENTRO_DESC"       # To see if it's a regional issue
+
+eda_params:
+  time_freq: "1mo"        # 1mo = 1 month, 1w = 1 week (Temporal grouping)
+  target_fractional_value: "LASTRO FRACIONADO"
