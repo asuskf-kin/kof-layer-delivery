@@ -35,7 +35,7 @@ def load_and_clean_data(file_path: Path) -> pl.DataFrame:
             logger.warning(f"PyArrow failed ({e}). Falling back to C engine...")
             df_pd = pd.read_csv(
                 file_path,
-                sep=",",
+                sep=";",
                 encoding="latin1",
                 decimal=",",
                 na_values=["NULL"],

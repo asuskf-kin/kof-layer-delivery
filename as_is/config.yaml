@@ -21,7 +21,9 @@ required_columns:
 
 target_schema:
   - "Nome do Mês"
+  - "clave"
   - "Ano"
+  - "Mes"
   - "Canal"
   - "MATRICULA"
   - "Dupli. Matricula"
@@ -44,7 +46,6 @@ target_schema:
   - "% Lastro"
   - "% Palete"
   - "Valida oport. Palete"
-
 months:
   1: "january"
   2: "february"
